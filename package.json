@@ -1,0 +1,68 @@
+{
+  "name": "arknights-desktop-pet",
+  "version": "2.3.0",
+  "description": "《明日方舟》干员桌面宠物",
+  "author": "shu-pet",
+  "private": true,
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "pack": "node -e \"const fs=require('fs'),p=JSON.parse(fs.readFileSync('package.json','utf8'));const v=p.version.split('.');v[2]=String(Number(v[2])+1);p.version=v.join('.');fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\\n')\" && vite build && electron-builder --win portable",
+    "pack-dir": "node -e \"const fs=require('fs'),p=JSON.parse(fs.readFileSync('package.json','utf8'));const v=p.version.split('.');v[2]=String(Number(v[2])+1);p.version=v.join('.');fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\\n')\" && vite build && electron-builder --win dir",
+    "pack-installer": "node -e \"const fs=require('fs'),p=JSON.parse(fs.readFileSync('package.json','utf8'));const v=p.version.split('.');v[2]=String(Number(v[2])+1);p.version=v.join('.');fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\\n')\" && vite build && electron-builder --win nsis",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "electron": "^33.3.1",
+    "electron-builder": "^26.15.3",
+    "typescript": "~5.7.3",
+    "vite": "^6.3.5",
+    "vite-plugin-electron": "^0.28.8",
+    "vite-plugin-electron-renderer": "^0.14.6",
+    "vue-tsc": "^2.2.8"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "electron",
+      "esbuild"
+    ]
+  },
+  "build": {
+    "appId": "arknights-desktop-pet",
+    "productName": "方舟桌面宠物",
+    "directories": {
+      "output": "release"
+    },
+    "electronDist": "node_modules/electron/dist",
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "electron/tray-icon.png",
+      "help/**/*"
+    ],
+    "win": {
+      "target": [
+        "portable",
+        "dir",
+        "nsis"
+      ],
+      "icon": "electron/tray-icon.png"
+    },
+    "portable": {
+      "artifactName": "方舟桌面宠物-${version}.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerSidebar": null,
+      "artifactName": "方舟桌面宠物-安装版-${version}.exe",
+      "shortcutName": "方舟桌面宠物"
+    }
+  }
+}

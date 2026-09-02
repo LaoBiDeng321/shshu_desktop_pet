@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使用说明 - 方舟桌面宠物</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      font-family: -apple-system, "Microsoft YaHei", sans-serif;
+      font-size: 14px;
+      line-height: 1.8;
+      padding: 28px 36px 40px;
+      max-width: 660px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #f0f0f0;
+      margin-bottom: 2px;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #d0d8ff;
+      margin-top: 22px;
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    h3 {
+      font-size: 13px;
+      font-weight: 500;
+      color: #b0b8e0;
+      margin-top: 14px;
+      margin-bottom: 4px;
+    }
+    p { margin-bottom: 8px; }
+    ul { margin: 4px 0 10px 18px; }
+    li { margin-bottom: 5px; }
+    kbd {
+      display: inline-block;
+      padding: 1px 7px;
+      font-size: 12px;
+      font-family: inherit;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 4px;
+      color: #ccc;
+    }
+    .note {
+      background: rgba(255, 180, 50, 0.08);
+      border-left: 3px solid rgba(255, 180, 50, 0.35);
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #d0b080;
+      margin: 14px 0;
+    }
+    .warn {
+      background: rgba(255, 80, 80, 0.08);
+      border-left: 3px solid rgba(255, 80, 80, 0.35);
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #d0a0a0;
+      margin: 14px 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 20px 0;
+    }
+    .btn-label {
+      display: inline-block;
+      padding: 1px 8px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 4px;
+      font-size: 12px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+<h1>方舟桌面宠物</h1>
+<div class="subtitle">Shu Desktop Pet &mdash; 使用说明</div>
+
+<!-- ===== 四个按钮 ===== -->
+<h2>操作面板（屏幕上方浮动工具栏）</h2>
+<p>启动时自动出现，共 5 个按钮，顶部 <kbd>⋮⋮ 拖拽移动 ⋮⋮</kbd> 可拖到任意位置：</p>
+<ul>
+  <li><span class="btn-label">互动</span> — 戳一下角色，它会做出攻击或技能反应，还会冒泡说话</li>
+  <li><span class="btn-label">翻转</span> — 让角色左右转向，换个方向看</li>
+  <li><span class="btn-label">动画</span> — 打开动画面板，查看/点播角色的各种动作（待机、攻击、技能等），支持循环播放</li>
+  <li><span class="btn-label">设置</span> — 打开设置面板，搜索切换角色、选皮肤、选模型视角（正面/背面/基建）</li>
+  <li><span class="btn-label">帮助</span> — 打开本页面</li>
+</ul>
+
+<!-- ===== 操作方式 ===== -->
+<h2>操作方式</h2>
+
+<h3>模型缩放</h3>
+<p><kbd>Alt</kbd> + <kbd>鼠标滚轮</kbd> — 放大缩小角色。</p>
+
+<h3>模型移动</h3>
+<p><kbd>Alt</kbd> + <kbd>鼠标左键拖拽</kbd> — 把宠物拖到屏幕任意位置。</p>
+
+<h3>角色一直跟鼠标跑？</h3>
+<p>按一下 <kbd>Alt</kbd> 键就松开了。</p>
+
+<div class="note">
+  <strong>Alt 操作没反应？</strong> 说明鼠标没在交互区域内。<br>
+  打开托盘菜单 → <strong>「显示边界」</strong>，屏幕上会出现一个<strong>红框</strong>，红框范围内才是模型的有效交互区。
+</div>
+
+<!-- ===== 面板 ===== -->
+<h2>面板操作</h2>
+<ul>
+  <li><strong>动画面板</strong> / <strong>设置面板</strong>：点击操作面板对应按钮打开，顶部拖拽条移动，再次点击按钮关闭</li>
+  <li><strong>操作面板</strong>：关掉后可从托盘菜单「显示/隐藏操作栏」重新打开</li>
+  <li><strong>面板位置会自动记住</strong>，拖到哪儿下次开还在那儿</li>
+</ul>
+
+<!-- ===== 退出 ===== -->
+<h2>退出程序</h2>
+<div class="warn">
+  <strong>关闭窗口不会退出程序</strong>，它只是隐藏到系统托盘里了。<br>
+  真正的退出：<strong>右键托盘图标 → 「退出」</strong>，或者托盘图标左键点一下显示窗口，再点关闭。
+</div>
+
+<!-- ===== 更新 ===== -->
+<h2>新角色发布</h2>
+<p>右键托盘图标 → <strong>「检查角色更新」</strong>，有新干员会自动下载。</p>
+
+<!-- ===== 托盘 ===== -->
+<h2>系统托盘（右键图标）</h2>
+<ul>
+  <li><strong>显示/隐藏</strong> — 切换窗口可见性</li>
+  <li><strong>置顶</strong> — 是否总在最前面</li>
+  <li><strong>帧率</strong> — 30/60 FPS 切换</li>
+  <li><strong>显示边界</strong> — 显示红框（场景边界）和蓝框（交互区）</li>
+  <li><strong>显示/隐藏操作栏</strong> — 开关操作面板</li>
+  <li><strong>使用说明</strong> — 打开本页面</li>
+  <li><strong>检查角色更新</strong> — 手动拉取新干员</li>
+  <li><strong>退出</strong> — 唯一能真正退出的方式！</li>
+</ul>
+
+<hr />
+<p style="text-align:center;color:#666;font-size:12px;">
+  数据来源：<a href="https://prts.wiki" target="_blank" style="color:#888;">PRTS wiki</a>
+</p>
+
+</body>
+</html>

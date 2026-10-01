@@ -1,0 +1,24 @@
+# 依赖与构建产物
+node_modules/
+dist/
+dist-electron/
+release/
+release-*/
+.vite/
+.vite-temp/
+
+# 本地个人文件 —— 含明文 API Key，切勿提交
+claude-deepseek-*.ps1
+.env
+.env.*
+*.env
+
+# 本地 Agent / 编辑器配置
+.claude/
+.idea/
+.vscode/
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
